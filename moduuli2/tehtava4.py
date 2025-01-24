@@ -1,0 +1,5 @@
+luku1, luku2, luku3 = float(input("1")), float(input("2")), float(input("3"))
+summa = (luku1+luku2+luku3)
+tulo = (luku1*luku2*luku3)
+keskiarvo = ((luku1 + luku2 + luku3)/3)
+print (f"Summa, tulo ja keskiarvo ovat:{summa:0.0f}, {tulo:0.0f}, {keskiarvo:0.0f}")
