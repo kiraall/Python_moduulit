@@ -8,5 +8,5 @@ while True:
             print("Ohjelma lopetetaan.")
             break
         print(f"{a} gallonaa on {muunnin(a):.2f} litraa.")
-    except ValueError:
+else ValueError:
         print("Virheellinen syöte! Syötä numero.")
