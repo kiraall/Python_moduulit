@@ -1,16 +1,9 @@
 class Auto:
-    def __init__(self, rekisteritunnus, huippunopeus):
+    def __init__(self, rekisteritunnus, huippunopeus, tämänhetkinen_nopeus, kuljettu_matka):
         self.rekisteritunnus = rekisteritunnus
         self.huippunopeus = huippunopeus
-        self.nyt_nopeus = 0  # Alustetaan nopeus nollaksi
-        self.kuljettu_matka = 0  # Alustetaan kuljettu matka nollaksi
+        self.tämänhetkinen_nopeus = tämänhetkinen_nopeus
+        self.kuljettu_matka = kuljettu_matka
+auto = Auto("ABC-123", 142, 0, 0)
 
-    def tulosta_ominaisuudet(self):
-        print(f"Rekisteritunnus: {self.rekisteritunnus}")
-        print(f"Huippunopeus: {self.huippunopeus} km/h")
-        print(f"Tämänhetkinen nopeus: {self.nyt_nopeus} km/h")
-        print(f"Kuljettu matka: {self.kuljettu_matka} km")
-
-
-uusiauto = Auto("ABC-123", 142)
-uusiauto.tulosta_ominaisuudet()
+print(f"{auto.rekisteritunnus} ja {auto.huippunopeus} ja {auto.tämänhetkinen_nopeus} ja {auto.kuljettu_matka}")
