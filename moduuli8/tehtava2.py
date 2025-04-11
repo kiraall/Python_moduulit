@@ -1,25 +1,20 @@
-import mysql.connector
+import random
 
-yhteys = mysql.connector.connect(
-         host='localhost',
-         port= 3306,
-         database='flight_game',
-         user='kirill',
-         password='Metro2033',
-         autocommit=True,
-         collation="utf8mb4_unicode_ci",
-         )
+arvaus = random.randint(1, 5)
 
-x = input("Anna lentokentän koodi: ")
+kysymys = int(input("Veikka numero"))
 
-sql = (f"SELECT airport.type, COUNT(*) "
-       f"FROM airport "
-       f"inner JOIN country ON airport.iso_country = country.iso_country "
-       f"WHERE country.iso_country = '{x}' "
-       f"GROUP BY airport.type ")
+if arvaus == kysymys:
+    print("Onneksi olkoon sä arvisit!")
 
-kursori = yhteys.cursor()
-kursori.execute(sql)
-tulos = kursori.fetchall()
+elif arvaus > kysymys:
+    print("Pienempi")
 
-print(tulos)
+elif arvaus < kysymys:
+    print("Isompi")
+
+else:
+    print("VÄÄRIN")
+
+
+
