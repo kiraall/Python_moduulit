@@ -1,2 +1,2 @@
-'use strict';
-const names = ['John', 'Paul', 'Jones'];
+const names = ["John", "Paul", "Jones"];
+document.getElementById("target").innerHTML = names.map(name => `<li>${name}</li>`).join("");
